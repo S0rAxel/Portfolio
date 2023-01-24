@@ -22,7 +22,10 @@ namespace UnityEngine.UI
             {
                 for (int i = 0; i < tabsList.Count; i++)
                 {
-                    tabsList[i].TabObject.SetActive(tab.Index == i);
+                    if (tabsList[i].TabObject != null)
+                    {
+                        tabsList[i].TabObject.SetActive(tab.Index == i); 
+                    }
                 }
 
                 currentIndex = tab.Index;

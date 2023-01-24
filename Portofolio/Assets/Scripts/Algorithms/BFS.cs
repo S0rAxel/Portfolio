@@ -23,15 +23,15 @@ public class BFS
         while (openSet.Count > 0)
         {
             Cell currentCell = openSet.Dequeue();
-            if (currentCell.dEdges.Contains(edgeType))
-            {
-                stopwatch.Stop();
-                ms = stopwatch.ElapsedMilliseconds;
-                //UnityEngine.Debug.Log("Path Found: " + stopwatch.ElapsedMilliseconds + "ms");
-                RetracePath(startingCell, currentCell);
+            //if (currentCell.dEdges.Contains(edgeType))
+            //{
+            //    stopwatch.Stop();
+            //    ms = stopwatch.ElapsedMilliseconds;
+            //    //UnityEngine.Debug.Log("Path Found: " + stopwatch.ElapsedMilliseconds + "ms");
+            //    RetracePath(startingCell, currentCell);
 
-                return CountPath(startingCell, currentCell);
-            }
+            //    return CountPath(startingCell, currentCell);
+            //}
 
             foreach (Cell neighbour in grid.GetNeighbours(currentCell))
             {
